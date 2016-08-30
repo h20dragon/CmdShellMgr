@@ -5,7 +5,10 @@ describe CmdShellMgr do
     expect(CmdShellMgr::VERSION).not_to be nil
   end
 
-  it 'does something useful' do
-    expect(false).to eq(true)
+
+  it 'should create Cmd object' do
+    cmd = CmdShellMgr::Command.new()
+    expect(cmd.is_a?(CmdShellMgr::Command)).to be true
   end
+
 end
