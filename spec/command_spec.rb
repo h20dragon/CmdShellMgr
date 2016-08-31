@@ -11,4 +11,10 @@ describe CmdShellMgr do
     expect(cmd.is_a?(CmdShellMgr::Command)).to be true
   end
 
+  it 'should define Command with ls' do
+    cmd = CmdShellMgr::Command.new("ls");
+    cmd.execute()
+    expect(cmd.exitStatus==0).to be true
+  end
+
 end
