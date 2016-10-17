@@ -30,7 +30,7 @@ module CmdShellMgr
         @results = %x[ #{@cmd} #{opts.to_s} ]
         @exitStatus = $?.exitstatus
       rescue => ex
-        puts __FILE__ + (__LINE__).to_S + " #{ex.class}"
+        puts __FILE__ + (__LINE__).to_s + " #{ex.class}"
         puts ex.backtrace
       end
 
